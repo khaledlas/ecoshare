@@ -7,9 +7,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "node server.js",
-    "start-dev": "nodemon server.js",
-    "dev": "concurrently \"npm start\" \"cd client && npm start\""
+    "start": "node server.js"
+    
   },
   "keywords": [],
   "author": "",
