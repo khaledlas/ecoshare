@@ -1,17 +1,13 @@
 const express = require("express");
-require("dotenv").config();
-// const connectDB = require("./config/connectDB");
+const connectDB = require("./config/connectDB");
 const quidproquoRouter = require("./routes/quidproquoRoute");
 const Router = require("./routes/userRoute");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
-const mongoose = require("mongoose");
-
-mongoose.connect(process.env.MONGO_URL);
-
+connectDB();
 //ROUTES
 app.use(express.json());
 app.use("/api/auth", Router);
@@ -35,6 +31,8 @@ if (
 }
 
 app.listen(
-  PORT,
-  console.log(`Server is up and running on http://localhost:${PORT}`)
+  process.env.PORT,
+  console.log(
+    `Server is up and running on http://localhost:${process.env.PORT}`
+  )
 );
