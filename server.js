@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 // const connectDB = require("./config/connectDB");
 const quidproquoRouter = require("./routes/quidproquoRoute");
 const Router = require("./routes/userRoute");
@@ -8,16 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const mongoose = require("mongoose");
-require("dotenv").config();
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log("Database is connected successfully");
-  } catch (error) {
-    console.log("Database is not connected");
-  }
-};
+mongoose.connect(process.env.MONGO_URL);
+
 //ROUTES
 app.use(express.json());
 app.use("/api/auth", Router);
