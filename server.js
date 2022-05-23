@@ -1,5 +1,5 @@
 require("dotenv").config();
-const path = require("path");
+// const path = require("path");
 const express = require("express");
 const connectDB = require("./config/connectDB");
 const quidproquoRouter = require("./routes/quidproquoRoute");
@@ -22,15 +22,15 @@ app.use("/api/quidproquos", quidproquoRouter);
 // });
 
 // server static assets if in production
-if (
-  process.env.NODE_ENV === "production" ||
-  process.env.NODE_ENV === "staging"
-) {
-  app.use(express.static("client/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/client/build/index.html"));
-  });
-}
+// if (
+//   process.env.NODE_ENV === "production" ||
+//   process.env.NODE_ENV === "staging"
+// ) {
+//   app.use(express.static("client/build"));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname + "/client/build/index.html"));
+//   });
+// }
 
 app.listen(
   process.env.PORT,
