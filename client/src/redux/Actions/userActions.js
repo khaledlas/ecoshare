@@ -18,7 +18,7 @@ export const register = (formData, Navigate) => async (dispatch) => {
   dispatch({ type: LOADING });
 
   try {
-    const res = await axios.post("/ecoshare.netlify.app/register", formData);
+    const res = await axios.post("/api/auth/register", formData);
 
     dispatch({ type: REGISTER, payload: res.data });
     Navigate("/profile");
