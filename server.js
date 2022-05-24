@@ -1,5 +1,5 @@
 require("dotenv").config();
-// const path = require("path");
+const path = require("path");
 const express = require("express");
 const connectDB = require("./config/connectDB");
 const quidproquoRouter = require("./routes/quidproquoRoute");
@@ -26,7 +26,7 @@ app.use("/api/quidproquos", quidproquoRouter);
 //   process.env.NODE_ENV === "production" ||
 //   process.env.NODE_ENV === "staging"
 // ) {
-// app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
