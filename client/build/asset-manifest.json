@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.71ab75c7.css",
+    "main.js": "/static/js/main.e46886c8.js",
+    "static/css/657.e1ce4f7c.chunk.css": "/static/css/657.e1ce4f7c.chunk.css",
+    "static/js/657.fd199409.chunk.js": "/static/js/657.fd199409.chunk.js",
+    "static/media/Sharing-Economy.jpg": "/static/media/Sharing-Economy.34fa3877d4bc74bafbff.jpg",
+    "index.html": "/index.html",
+    "main.71ab75c7.css.map": "/static/css/main.71ab75c7.css.map",
+    "main.e46886c8.js.map": "/static/js/main.e46886c8.js.map",
+    "657.e1ce4f7c.chunk.css.map": "/static/css/657.e1ce4f7c.chunk.css.map",
+    "657.fd199409.chunk.js.map": "/static/js/657.fd199409.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71ab75c7.css",
+    "static/js/main.e46886c8.js"
+  ]
+}
